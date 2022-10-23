@@ -663,8 +663,8 @@ class MyUtilities {
           acceptReporters: true
         },
         lineout: {
-          items: [' ', '\n', ', ', ','],
-          acceptReporters: true
+          items: ['Space', 'New Line', 'Comma and space', 'Just a comma'],
+          acceptReporters: false
         }
       }
     }
@@ -836,7 +836,7 @@ class MyUtilities {
   }
 
   listt({A}) { // Modified by @kilgorezer
-    return list.join(A) // Modified by @kilgorezer
+    return list.join(A=='Space'?' ':(A=='New Line'?'\n':(A=='Comma and space'?', ':(A=="Just a comma"?',':' ')))) // Modified by @kilgorezer
   }
 
   addtolist({A}) {
