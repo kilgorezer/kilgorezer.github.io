@@ -678,7 +678,7 @@ class MyUtilities {
   }
 
   ifthen({A, B, C}) { // fixed ifthen and ifelse opcode error
-    return A ? '' + B : '' + C
+    return Boolean(A) ? '' + B : '' + C // Minor bug fix
   }
 
   random ({A}) {
