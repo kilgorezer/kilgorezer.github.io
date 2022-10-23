@@ -825,5 +825,33 @@ class MyUtilities {
     // Added by @kilgorezer
     return a.IN;
   }
+
+  itemoflist({A}) {
+    var n = A
+    n–;
+    return list[n]
+  }
+
+  lengthoflist() {
+    return list.length
+  }
+
+  listcont({A}) {
+    return list.includes(A)
+  }
+
+  roundz({A}) {
+    var fun = A
+    fun = fun - Math.abs(0.00000000001)
+    return Math.round(fun)
+  }
+
+  setbool({A}) {
+    bool = A
+  }
+
+  boool() {
+    return bool
+  }
 }
 Scratch.extensions.register(new MyUtilities());
