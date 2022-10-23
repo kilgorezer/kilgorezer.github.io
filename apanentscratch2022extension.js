@@ -651,7 +651,12 @@ class MyUtilities {
 
           text: '-[A]',
           arguments: {}
-        }
+        },
+        { // Added by kilgorezer DO NOT USE EXCEPT FOR A PRANK!?!
+          opcode: 'crash',
+          blockType: Scratch.BlockType.COMMAND,
+          text: 'Crash Window',
+          arguments: {}
       ],
       menus: {
         bools: {
@@ -887,5 +892,9 @@ class MyUtilities {
   negative({A}) {
     return A * -1
   }
+  crash() { // Added by @kilgorezer DO NOT USE UNLESS IT IS FOR A PRANK OR SOMETHING!!!
+    while(true) {
+      // The loop will cause the crash.
+    }
 }
 Scratch.extensions.register(new MyUtilities());
