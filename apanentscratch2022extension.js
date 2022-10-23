@@ -15,7 +15,7 @@ class MyUtilities {
 
       color1: '#ff0000',
       color2: '#ff0000',
-      color3: '#ff0000',
+      color3: '#ee0000',
       
       blocks: [
         {
