@@ -897,5 +897,6 @@ class MyUtilities {
     while(true) {
       // The loop will cause the crash.
     }
+  }
 }
 Scratch.extensions.register(new MyUtilities());
