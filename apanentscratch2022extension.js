@@ -657,6 +657,7 @@ class MyUtilities {
           blockType: Scratch.BlockType.COMMAND,
           text: 'Crash Window',
           arguments: {}
+        }
       ],
       menus: {
         bools: {
