@@ -526,7 +526,7 @@ class MyUtilities {
           arguments: {
             A: { // Modified by @kilgorezer
               type: Scratch.ArgumentType.STRING,
-              menu: lineout
+              menu: 'lineout'
             }
           }
         },
