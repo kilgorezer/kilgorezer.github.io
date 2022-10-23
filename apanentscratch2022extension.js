@@ -829,7 +829,7 @@ class MyUtilities {
 
   itemoflist({A}) {
     var n = A
-    n–;
+    n--;
     return list[n]
   }
 
