@@ -561,6 +561,74 @@ class MyUtilities {
               defaultValue: 'true'
             }
           }
+        },
+        {
+          opcode: 'itemoflist',
+
+          blockType: Scratch.BlockType.REPORTER,
+
+          text: 'item [A] of list',
+          arguments: {
+            A: { 
+              type: Scratch.ArgumentType.NUMBER,
+              defaultValue: 1
+            }
+          }
+        },
+        {
+          opcode: 'lengthoflist',
+
+          blockType: Scratch.BlockType.REPORTER,
+
+          text: 'length of list',
+          arguments: {}
+        },
+        {
+          opcode: 'listcont',
+
+          blockType: Scratch.BlockType.BOOLEAN,
+
+          text: 'list contains [A]?',
+          arguments: {
+            A: { 
+              type: Scratch.ArgumentType.STRING,
+              defaultValue: 'thing'
+            }
+          }
+        },
+        {
+          opcode: 'roundz',
+
+          blockType: Scratch.BlockType.REPORTER,
+
+          text: 'roundz [A]',
+          arguments: {
+            A: { 
+              type: Scratch.ArgumentType.NUMBER,
+              defaultValue: 0.5
+            }
+          }
+        },
+        {
+          opcode: 'setbool',
+
+          blockType: Scratch.BlockType.COMMAND,
+
+          text: 'set bool to [A]',
+          arguments: {
+            A: { 
+              type: Scratch.ArgumentType.STRING,
+              menu: 'bools'
+            }
+          }
+        },
+        {
+          opcode: 'boool',
+
+          blockType: Scratch.BlockType.BOOLEAN,
+
+          text: 'current boolean',
+          arguments: {}
         }
       ],
       menus: {
