@@ -629,7 +629,7 @@ class MyUtilities {
   }
 
   ifnumerr ({A}) {
-    return A == 'NaN' || A == NaN || A == 'NaN '
+    return isNaN(Number(A))
   }
 
   uppercase ({A}) {
