@@ -522,7 +522,7 @@ class MyUtilities {
 
           blockType: Scratch.BlockType.REPORTER,
 
-          text: 'list [A]',
+          text: 'list, with seperator being [A]',
           arguments: {
             A: { // Modified by @kilgorezer
               type: Scratch.ArgumentType.STRING,
