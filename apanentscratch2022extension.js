@@ -666,7 +666,7 @@ class MyUtilities {
   }
 
   deccounter () {
-    counter–;
+    counter--;
   }
 
   join3 ({A, B, C}) {
