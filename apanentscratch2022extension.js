@@ -522,8 +522,13 @@ class MyUtilities {
 
           blockType: Scratch.BlockType.REPORTER,
 
-          text: 'list',
-          arguments: {}
+          text: 'list [A]',
+          arguments: {
+            A: { // Modified by @kilgorezer
+              type: Scratch.ArgumentType.STRING,
+              menu: lineout
+            }
+          }
         },
         {
           opcode: 'addtolist',
@@ -656,6 +661,10 @@ class MyUtilities {
         chars: {
           items: ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"],
           acceptReporters: true
+        },
+        lineout: {
+          items: [' ', '\n', ', ', ','],
+          acceptReporters: false
         }
       }
     }
@@ -826,8 +835,8 @@ class MyUtilities {
     string += A
   }
 
-  listt() {
-    return list.join(' ')
+  listt({A}) { // Modified by @kilgorezer
+    return list.join(A) // Modified by @kilgorezer
   }
 
   addtolist({A}) {
