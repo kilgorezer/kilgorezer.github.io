@@ -630,6 +630,22 @@ class MyUtilities {
 
           text: 'current boolean',
           arguments: {}
+        },
+        {
+          opcode: 'e',
+
+          blockType: Scratch.BlockType.REPORTER,
+
+          text: 'E',
+          arguments: {}
+        },
+        {
+          opcode: 'negative',
+
+          blockType: Scratch.BlockType.REPORTER,
+
+          text: '-[A]',
+          arguments: {}
         }
       ],
       menus: {
@@ -853,6 +869,14 @@ class MyUtilities {
 
   boool() {
     return bool
+  }
+
+  e() {
+    return Math.E
+  }
+
+  negative({A}) {
+    return A * -1
   }
 }
 Scratch.extensions.register(new MyUtilities());
