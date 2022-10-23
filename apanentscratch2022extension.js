@@ -664,7 +664,7 @@ class MyUtilities {
         },
         lineout: {
           items: [' ', '\n', ', ', ','],
-          acceptReporters: false
+          acceptReporters: true
         }
       }
     }
