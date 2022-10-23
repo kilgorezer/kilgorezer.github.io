@@ -2,6 +2,7 @@
 var counter = 0
 var string = ''
 var list = []
+var bool = false
 
 class MyUtilities {
 
