@@ -1,6 +1,7 @@
-// Fixed by @kilgorezer on Scratch, original by @apanentscratch2022 on Scratch
+// By @apanentscratch2022 on Scratch
 var counter = 0
 var string = ''
+var list = []
 
 class MyUtilities {
 
@@ -514,6 +515,40 @@ class MyUtilities {
               defaultValue: 'apple'
             }
           }
+        },
+        {
+          opcode: 'listt',
+
+          blockType: Scratch.BlockType.REPORTER,
+
+          text: 'list',
+          arguments: {}
+        },
+        {
+          opcode: 'addtolist',
+
+          blockType: Scratch.BlockType.COMMAND,
+
+          text: 'add [A] to list',
+          arguments: {
+            A: { 
+              type: Scratch.ArgumentType.STRING,
+              defaultValue: 'apple'
+            }
+          }
+        },
+        {
+          opcode: 'clearlist',
+
+          blockType: Scratch.BlockType.COMMAND,
+
+          text: 'clear list',
+          arguments: {
+            A: { 
+              type: Scratch.ArgumentType.STRING,
+              defaultValue: 'apple'
+            }
+          }
         }
       ],
       menus: {
@@ -631,7 +666,7 @@ class MyUtilities {
   }
 
   deccounter () {
-    counter–-;
+    counter–;
   }
 
   join3 ({A, B, C}) {
@@ -692,6 +727,18 @@ class MyUtilities {
 
   changestring ({A}) {
     string += A
+  }
+
+  listt() {
+    return list.join(' ')
+  }
+
+  addtolist({A}) {
+    list.push(A)
+  }
+
+  clearlist() {
+    list = []
   }
 }
 Scratch.extensions.register(new MyUtilities());
