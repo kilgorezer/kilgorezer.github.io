@@ -677,7 +677,7 @@ class MyUtilities {
     return "NaN";
   }
 
-  ifthan({A, B, C}) { // fixed ifthan and ifelse opcode error
+  ifthen({A, B, C}) { // fixed ifthen and ifelse opcode error
     return A ? '' + B : '' + C
   }
 
