@@ -549,6 +549,18 @@ class MyUtilities {
               defaultValue: 'apple'
             }
           }
+        },
+        {
+          // Added by @kilgorezer
+          opcode: 'extrastuffstrtobool',
+          blockType: Scratch.BlockType.BOOLEAN,
+          text:  '[IN]',
+          arguments: {
+            IN: {
+              type: Scratch.ArgumentType.STRING,
+              defaultValue: 'true'
+            }
+          }
         }
       ],
       menus: {
@@ -739,6 +751,11 @@ class MyUtilities {
 
   clearlist() {
     list = []
+  }
+  
+  extrastuffstrtobool(a) {
+    // Added by @kilgorezer
+    return a.IN;
   }
 }
 Scratch.extensions.register(new MyUtilities());
