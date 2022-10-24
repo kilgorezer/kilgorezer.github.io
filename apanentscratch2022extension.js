@@ -561,9 +561,9 @@ class MyUtilities {
           // Added by @kilgorezer
           opcode: /*'extrastuffstrtobool'*/ 'strtoboolean', // changed for interchangability reasons
           blockType: Scratch.BlockType.BOOLEAN,
-          text:  '[IN]',
+          text:  /*'[IN]'*/ '[A]', // Same
           arguments: {
-            IN: {
+            /*IN*/A: { // Also same
               type: Scratch.ArgumentType.STRING,
               defaultValue: 'true'
             }
