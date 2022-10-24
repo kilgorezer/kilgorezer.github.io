@@ -2,10 +2,10 @@
 // Unicode
 var CREEPY = ' ̶̝̿ ̴̨̈́ ̴̻̏ ̸̲̽ ̵̓ͅ ̴̟̈́ ̵̺̐ ̵̼́ ̴̨̿ ̸͉͆'.split(' ');
 CREEPY.shift(1);
-var ljmhpsfafs = function(in) {
-  for(var i = 0; i < in.length; i++) {
-    for(var j = 0; j < CREEPY.length && i < in.length) {
-      out += in[i] + CREEPY[j];
+var ljmhpsfafs = function(inp) {
+  for(var i = 0; i < inp.length; i++) {
+    for(var j = 0; j < CREEPY.length && i < inp.length) {
+      out += inp[i] + CREEPY[j];
       i++;
     }
   }
