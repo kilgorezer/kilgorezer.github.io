@@ -559,7 +559,7 @@ class MyUtilities {
         },
         {
           // Added by @kilgorezer
-          opcode: 'extrastuffstrtobool',
+          opcode: /*'extrastuffstrtobool'*/ 'strtoboolean', // changed for interchangability reasons
           blockType: Scratch.BlockType.BOOLEAN,
           text:  '[IN]',
           arguments: {
