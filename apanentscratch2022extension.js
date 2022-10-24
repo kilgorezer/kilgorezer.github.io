@@ -966,7 +966,7 @@ class MyUtilities {
   }
 
   xor({A, B}) {
-    return (Boolean(A) == true || Boolean(B) == true) && (Boolean(A) != Boolean(B))
+    return (Boolean(A) == true || Boolean(B) == true) && (Boolean(A) != Boolean(B)) // Fixed bug in script - @kilgorezer
   }
 
   timerfixed() {
