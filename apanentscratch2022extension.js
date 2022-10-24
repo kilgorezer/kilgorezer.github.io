@@ -966,7 +966,7 @@ class MyUtilities {
   }
 
   xor({A, B}) {
-    return ((A == true || B == true) && (A != B)) || ((A == 'true' || B == 'true')
+    return (Boolean(A) == true || Boolean(B) == true) && (Boolean(A) != Boolean(B))
   }
 
   timerfixed() {
