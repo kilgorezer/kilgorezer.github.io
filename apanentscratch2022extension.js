@@ -3,6 +3,7 @@ var counter = 0
 var string = ''
 var list = []
 var bool = false
+var timess1 = Date.now() / 1000
 
 class MyUtilities {
 
@@ -657,6 +658,67 @@ class MyUtilities {
           blockType: Scratch.BlockType.COMMAND,
           text: 'Crash Window',
           arguments: {}
+        },
+        {
+          opcode: 'varjson',
+
+          blockType: Scratch.BlockType.REPORTER,
+
+          text: 'add [A] with a value [B] as a variable in json',
+          arguments: {
+            A: { 
+              type: Scratch.ArgumentType.STRING,
+              defaultValue: 'apples'
+            },
+            B: { 
+              type: Scratch.ArgumentType.STRING,
+              defaultValue: Math.ceil(Math.random() * 5)
+            }
+          }
+        },
+        {
+          opcode: 'xor',
+
+          blockType: Scratch.BlockType.BOOLEAN,
+
+          text: '[A] xor [B]',
+          arguments: {
+            A: {
+              type: Scratch.ArgumentType.BOOLEAN
+            },
+            B: {
+              type: Scratch.ArgumentType.BOOLEAN
+            }
+          }
+        },
+        {
+          opcode: 'timerfixed',
+
+          blockType: Scratch.BlockType.REPORTER,
+
+          text: 'timer (fixed)',
+          arguments: {}
+        },
+        {
+          opcode: 'timerreset',
+
+          blockType: Scratch.BlockType.COMMAND,
+
+          text: 'reset fixed timer',
+          arguments: {}
+        },
+        {
+          opcode: 'strtoboolean',
+
+          blockType: Scratch.BlockType.BOOLEAN,
+
+          text: '[A]',
+          arguments: {
+            A: { 
+              type: Scratch.ArgumentType.STRING,
+              defaultValue: 'true'
+            }
+          }
         }
       ],
       menus: {
@@ -897,6 +959,26 @@ class MyUtilities {
     while(true) {
       // The loop will cause the crash.
     }
+  }
+
+  varjson({A, B}) {
+    return 'var ' + A + ' = ' + "'" + B + "'"
+  }
+
+  xor({A, B}) {
+    return ((A == true || B == true) && (A != B)) || ((A == 'true' || B == 'true')
+  }
+
+  timerfixed() {
+    return (Date.now() / 1000) - timess1
+  }
+
+  timerreset() {
+    timess1 = Date.now() / 1000
+  }
+
+  strtoboolean({A}) {
+    return A
   }
 }
 Scratch.extensions.register(new MyUtilities());
