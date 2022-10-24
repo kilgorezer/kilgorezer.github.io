@@ -707,19 +707,19 @@ class MyUtilities {
           text: 'reset fixed timer',
           arguments: {}
         },
-        {
-          opcode: 'strtoboolean',
-
-          blockType: Scratch.BlockType.BOOLEAN,
-
-          text: '[A]',
-          arguments: {
-            A: { 
-              type: Scratch.ArgumentType.STRING,
-              defaultValue: 'true'
-            }
-          }
-        }
+        //{ // Edit by @kilgorezer : Already added lol
+        //  opcode: 'strtoboolean',
+        //
+        //  blockType: Scratch.BlockType.BOOLEAN,
+        //
+        //  text: '[A]',
+        //  arguments: {
+        //    A: { 
+        //      type: Scratch.ArgumentType.STRING,
+        //      defaultValue: 'true'
+        //    }
+        //  }
+        //}
       ],
       menus: {
         bools: {
