@@ -625,7 +625,7 @@ class MyUtilities {
           arguments: {
             A: { 
               type: Scratch.ArgumentType.STRING,
-              menu: 'bools'
+              menu: 'bools2' // Modified by @kilgorezer
             }
           }
         },
@@ -726,6 +726,10 @@ class MyUtilities {
           items: ['true', 'false'], // Fixed bug - @kilgorezer
           acceptReporters: false // Modified by @kilgorezer
         },
+        bools2: { // Added by @kilgorezer
+          items: ['true', 'false'],
+          acceptReporters: true
+        }
         chars: {
           items: ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"],
           acceptReporters: true
@@ -941,7 +945,8 @@ class MyUtilities {
   }
 
   setbool({A}) {
-    bool = A
+    A = String(A) // Modified by @kilgorezer
+    bool = (A=='false'||A=='NaN'||A==''||A==undefined||A=='0')?false:true // Modified by @kilgorezer
   }
 
   boool() {
