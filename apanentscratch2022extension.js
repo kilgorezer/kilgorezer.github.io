@@ -723,7 +723,7 @@ class MyUtilities {
       ],
       menus: {
         bools: {
-          items: [true, false], // Fixed bug - @kilgorezer
+          items: ['true', 'false'], // Fixed bug - @kilgorezer
           acceptReporters: false // Modified by @kilgorezer
         },
         chars: {
@@ -852,7 +852,7 @@ class MyUtilities {
   }
   
   trueorfalse({A}) {
-    return A;
+    return String(A)=='true';
   }
 
   thing({A}) {
