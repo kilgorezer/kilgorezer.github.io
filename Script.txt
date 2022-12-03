@@ -1,0 +1,102 @@
+#welcomeMessage
+	cmd tempblock air {MBCoords}
+	msg &mkilgore%fzer: Hia! Welcome to my map!
+	delay 1000
+	cmd tempblock speech {MBCoords}
+quit
+
+#createBuddy
+	cmd bot copy Amoxy+ @p
+	cmd botnick @p
+	cmd skin bot @p
+quit
+
+#makeAmongUs
+    cmd Bot add @pBuddy
+    cmd botnick @pBuddy @p's buddy
+    cmd model bot @pBuddy amoxy+amongus
+    cmd skin bot @pBuddy Amoxy+
+quit
+
+#main
+	msg &fWelcome to my map!
+	cmd input &mWelcome!
+	delay 500
+	cmd input &2Welcome!
+	delay 500
+	cmd input &mWelcome!
+	delay 500
+	cmd input &2Welcome!
+	delay 500
+	cmd input &mWelcome!
+	delay 500
+	cmd input &2Welcome!
+	delay 500
+	cmd input &mWelcome!
+	delay 500
+	cmd input &2Welcome!
+	delay 500
+	cmd input &mWelcome!
+	delay 500
+	cmd input &2Welcome!
+	delay 500
+	cmd input &mWelcome!
+	delay 500
+	cmd input &2Welcome!
+	delay 500
+	cmd input &mWelcome!
+	delay 500
+	cmd input &2Welcome!
+	delay 500
+	cmd input &mWelcome!
+	delay 500
+	cmd input &2Welcome!
+	delay 500
+	cmd input &mWelcome!
+	delay 500
+	cmd input &2Welcome!
+	delay 500
+	cmd input &mWelcome!
+	delay 500
+	cmd input &2Welcome!
+	delay 500
+	reply 1|I want the kigorezerTail model and skin|#kilgorezerTail
+    reply 2|No thanks.|#emptyCommand
+quit
+
+#roll
+	cmd roll
+quit
+
+#rollUnsignedInt
+	cmd roll 65535
+quit
+
+#update
+	cmd osupdatescript https://zerius-learning-2nd.w3spaces.com/Script.txt
+quit
+
+#kilgorezerTail
+	cmd skin https://www.dropbox.com/s/6k4i1mtx79n8tkr/charWinter.png?dl=0
+	cmd model doge_factor+tail:0.85
+quit
+
+#kilgorezerTailTiny
+	cmd skin https://www.dropbox.com/s/6k4i1mtx79n8tkr/charWinter.png?dl=0
+	cmd model doge_factor+tail:0.085
+quit
+
+#input
+	cpemsg announce {runarg1} {runarg2}
+quit
+
+#changeModel
+	cmd model {runarg1}|{runarg2}
+quit
+
+#snakeInput
+	msg {runarg1}: To be added! 
+quit
+
+#emptyCommand
+quit
