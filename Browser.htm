@@ -1,0 +1,21 @@
+<title>Browser Window</title>
+<button onclick='open("https://www.google.com/", "", p);' title="https://www.google.com">Open Google</button>
+<br/><button onclick='i=prompt("What is the url of the site?");if(i==null){}else{open("http://"+i, "", p);}' title="Prompt">Open other site (http or https)</button>
+<br/><button onclick='i=prompt("What is the url of the site?");if(i==null){}else{open(i, "", p);}' title="Prompt">Open other site (enter full url)</button>
+<hr/><button onclick='popup=!popup' title="Toggle popup">Toggle if the site is opened in a popup window.</button>
+<br/><span title="Should the site open in a popup window?"><code>popup:</code> <span id="hi"><span style="color:red">There is a problem with the JavaScript</span></span></span>
+<script>
+	var i = "";
+	var popup = true;
+	var p = "popup=true";
+	setInterval(
+		function() {
+			document.getElementById("hi").innerHTML=!!popup;
+			if(popup){
+				p="popup=true";
+			}else{
+				p="";
+			}
+		}, 0
+	);
+</script>
