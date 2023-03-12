@@ -10,7 +10,9 @@
   cpemsg announce %31
   delay 1000
   cpemsg announce %4Go!
+  reach 0
   terminate
 #lapupdate
   cpemsg announce %eYou did a lap!
+  reach 0
   terminate
