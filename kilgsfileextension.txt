@@ -9,9 +9,11 @@ class kilg {
         {
           opcode: 'hello',
           blockType: Scratch.BlockType.REPORTER,
-          text: 'Get the file in the location C:\[ONE]'
-          ONE: {
-              type: Scratch.ArgumentType.STRING
+          text: 'Get the file in the location C:\[ONE]',
+          arguments: {
+            ONE: {
+                type: Scratch.ArgumentType.STRING
+            }
           }
         }
       ]
