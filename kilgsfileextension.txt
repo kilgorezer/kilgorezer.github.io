@@ -1,17 +1,18 @@
-var fileSystem = {}
-
 class kilg {
   getInfo() {
     return {
       id: 'fvnxjnkvnjnknjvknjjvcnjnjvnjxnjkvnjkjkn',
-      name: 'File System Manager (Backslash Enforced)',
+      name: 'Object Manager',
       blocks: [
         {
           opcode: 'hello',
           blockType: Scratch.BlockType.REPORTER,
-          text: 'Get the file in the location C:\\[ONE]',
+          text: 'Get [ONE].[TWO]',
           arguments: {
             ONE: {
+                type: Scratch.ArgumentType.STRING
+            },
+            TWO: {
                 type: Scratch.ArgumentType.STRING
             }
           }
@@ -21,14 +22,7 @@ class kilg {
   }
 
   hello(args) {
-    args = args.ONE.toString().split("\\")
-    var tempfsys = Object.create(fileSystem)
-    for(var i = 0; i < args.length; i++) {
-      tempfsys = fileSystem[args[i]]
-    }
-    if(typeof(tempfsys) != "object" && typeof(tempfsys) != "undefined") {
-      return tempfsys
-    }
+    JSON.parse(args.ONE)[args.TWO]
   }
   store(args) {
     //
