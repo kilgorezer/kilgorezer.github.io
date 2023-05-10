@@ -9,7 +9,7 @@ class kilg {
         {
           opcode: 'hello',
           blockType: Scratch.BlockType.REPORTER,
-          text: 'Get the file in the location C:\[ONE]',
+          text: 'Get the file in the location C:\\[ONE]',
           arguments: {
             ONE: {
                 type: Scratch.ArgumentType.STRING
@@ -21,7 +21,7 @@ class kilg {
   }
 
   hello(args) {
-    args = args.one.split("\")
+    args = args.one.split("\\")
     var tempfsys = Object.create(fileSystem)
     for(var i = 0; i < args.length; i++) {
       tempfsys = fileSystem[args[i]]
