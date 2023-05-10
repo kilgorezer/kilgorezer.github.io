@@ -1,0 +1,36 @@
+var fileSystem = {}
+
+class kilg {
+  getInfo() {
+    return {
+      id: 'fvnxjnkvnjnknjvknjjvcnjnjvnjxnjkvnjkjkn',
+      name: 'File System Manager (Backslash Enforced)',
+      blocks: [
+        {
+          opcode: 'hello',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'Get the file in the location C:\[ONE]'
+          ONE: {
+              type: Scratch.ArgumentType.STRING
+          }
+        }
+      ]
+    };
+  }
+
+  hello(args) {
+    args = args.one.split("\")
+    var tempfsys = Object.create(fileSystem)
+    for(var i = 0; i < args.length; i++) {
+      tempfsys = fileSystem[args[i]]
+    }
+    if(typeOf(tempfsys) != "Object") {
+      return tempfsys
+    }
+  }
+  store(args) {
+    //
+  }
+}
+
+Scratch.extensions.register(new kilg());
