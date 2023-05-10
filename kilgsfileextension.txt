@@ -26,7 +26,7 @@ class kilg {
     for(var i = 0; i < args.length; i++) {
       tempfsys = fileSystem[args[i]]
     }
-    if(typeOf(tempfsys) != "Object") {
+    if(typeof(tempfsys) != "Object") {
       return tempfsys
     }
   }
