@@ -21,7 +21,7 @@ class kilg {
   }
 
   hello(args) {
-    args = args.one.split("\\")
+    args = args.ONE.toString().split("\\")
     var tempfsys = Object.create(fileSystem)
     for(var i = 0; i < args.length; i++) {
       tempfsys = fileSystem[args[i]]
