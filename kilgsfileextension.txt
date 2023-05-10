@@ -16,16 +16,34 @@ class kilg {
                 type: Scratch.ArgumentType.STRING
             }
           }
+        },
+        {
+          opcode: 'store',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'Store [THREE] in [ONE].[TWO]',
+          arguments: {
+            ONE: {
+                type: Scratch.ArgumentType.STRING
+            },
+            TWO: {
+                type: Scratch.ArgumentType.STRING
+            },
+            THREE: {
+                type: Scratch.ArgumentType.STRING
+            }
+          }
         }
       ]
     };
   }
 
   hello(args) {
-    JSON.parse(args.ONE)[args.TWO]
+    return JSON.parse(args.ONE)[args.TWO]
   }
   store(args) {
-    //
+    var temp = JSON.parse(args.ONE)
+    temp[args.TWO] = args.THREE
+    return JSON.stringify(temp)
   }
 }
 
