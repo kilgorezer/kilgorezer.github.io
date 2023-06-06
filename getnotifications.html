@@ -1,9 +1,9 @@
 <body><script>
-  var granted = Notification.permission=="granted"?1:(Notification.permission=="default"?(function() {Notification.requestPermission(); return -1})():0);
+  var granted = Notification.permission=="granted"?1:(Notification.permission=="default"?(function() {Notification.requestPermission(); return NaN})():0);
   if (granted) {
     document.body.innerHTML += "Granted!";
   }
-  else if (granted==-1) {
+  else if (isNaN(granted)) {
     document.body.innerHTML += "Asked Permission.";
   }
   else {
