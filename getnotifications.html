@@ -1,4 +1,4 @@
-<script>
+<body><script>
   var granted = Notification.permission=="granted"?1:(Notification.permission=="default"?Notification.requestPermission():0);
   if (granted) {
     document.body.innerHTML += "Granted!";
@@ -9,4 +9,4 @@
 </script>
 <noscript>
   Unknowable!
-</noscript>
+</noscript></body>
