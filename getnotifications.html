@@ -1,8 +1,10 @@
 <body><script>
-  var granted = Notification.permission=="granted"?1:(Notification.permission=="default"?Notification.requestPermission():0);
+  var granted = Notification.permission=="granted"?1:(Notification.permission=="default"?(function() {Notification.requestPermission(); return -1})():0);
   if (granted) {
     document.body.innerHTML += "Granted!";
   }
+  else if (granted==-1) {
+    document.body.innerHTML += "Asked Permission.";
   else {
     document.body.innerHTML += "Denied!";
   }
