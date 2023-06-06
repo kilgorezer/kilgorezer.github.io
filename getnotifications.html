@@ -1,14 +1,19 @@
-<body><script>
+<body><button onclick="main(true)" id="r">Request</button>
+<script>
+  function main(a) {
   var granted = Notification.permission=="granted"?1:(Notification.permission=="default"?(function() {Notification.requestPermission(); return NaN})():0);
-  if (granted) {
+  if (granted&&a) {
     document.body.innerHTML += "Granted!";
   }
-  else if (isNaN(granted)) {
+  else if (isNaN(granted)&&a) {
     document.body.innerHTML += "Asked Permission.";
   }
-  else {
+  else if (a) {
     document.body.innerHTML += "Denied!";
-  }
+  }return granted
+  if (a) {
+    document.getElementById("r").remove();
+  }}
 </script>
 <noscript>
   Unknowable!
