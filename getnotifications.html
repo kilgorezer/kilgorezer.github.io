@@ -3,6 +3,9 @@
   var send = function(icon, title, text) {
     return new Notification(title, { body: text, icon: icon });
   };
+  function requestNotificationPermission() {
+    Notification.requestPermission()
+  }
   function main(a) {
   var granted = Notification.permission=="granted"?1:(Notification.permission=="default"?(function() {requestNotificationPermission(); return NaN})():0);
   if (granted&&a) {
