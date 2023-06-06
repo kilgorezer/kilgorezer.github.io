@@ -1,7 +1,10 @@
 <body><button onclick="main(true)" id="r">Request</button>
 <script>
+  var send = function(icon, title, text) {
+    return new Notification(title, { body: text, icon: icon });
+  };
   function main(a) {
-  var granted = Notification.permission=="granted"?1:(Notification.permission=="default"?(function() {Notification.requestPermission(); return NaN})():0);
+  var granted = Notification.permission=="granted"?1:(Notification.permission=="default"?(function() {requestNotificationPermission(); return NaN})():0);
   if (granted&&a) {
     document.body.innerHTML += "Granted!";
   }
