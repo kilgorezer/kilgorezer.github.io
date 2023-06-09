@@ -1,1 +1,1 @@
-This is a copy of an offline version created by downloading a blank embedable geogebra file.
+This is a copy of an offline version created by downloading a blank exportable geogebra file.
