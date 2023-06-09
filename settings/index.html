@@ -1,14 +1,28 @@
-;<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <title id="title">
-      Settings (EXPERIMENTAL!!!)
+      Settings (REQUIRES JAVASCRIPT)
     </title>
   </head>
   <body>
     <h1>
       Settings (EXPERIMENTAL)
     </h1>
+    <p> System themes: </p>
+    <button show-in-light>
+      Light Mode
+    </button>
+    <button show-in-dark>
+      Dark Mode
+    </button><br/>
+    <p> Main URL Redirection </p>
+    <button>
+      Old Website (Nonfunctional)
+    </button><br/>
+    <button>
+      Same Site
+    </button>
   </body>
   <script>
     var expcount = 0;
@@ -20,10 +34,10 @@
       }
       if(!(expcount%2)) {
         // even
-        document.getElementById(titlename).innerHTML = "Settings";
+        document.getElementById(titlename).innerHTML = "Settings (STILL IN DEVELOPMENT)";
       }
       expcount++;
     }
-    var noticeid = setInterval(experimentalNotice, 500);
+    var noticeid = setInterval(experimentalNotice, 750);
   </script>
 </html>
