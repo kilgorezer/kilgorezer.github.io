@@ -31,6 +31,10 @@
     alert("This menu is experimental and not guaranteed to work!");
     var expcount = 0;
     const titlename = "title";
+    if(!localStorage.KZGITSETTINGS) {
+      localStorage.KZGITSETTINGS = "{}";
+    }
+    const options = JSON.parse(localStorage.KZGITSETTINGS);
     function experimentalNotice() {
       if(expcount%2) {
         // odd
@@ -43,5 +47,8 @@
       expcount++;
     }
     var noticeid = setInterval(experimentalNotice, 750);
+    var storageid = setInterval(function() {
+      localStorage.KZGITSETTINGS = JSON.stringify(options);
+    }, 0);
   </script>
 </html>
