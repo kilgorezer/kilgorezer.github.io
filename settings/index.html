@@ -2,12 +2,15 @@
 <html>
   <head>
     <title id="title">
-      Settings (REQUIRES JAVASCRIPT)
+      Settings (LOADING)
     </title>
   </head>
   <body>
     <h1>
       Settings (EXPERIMENTAL)
+      <noscript><br/>
+        You need JavaScript to use Settings!
+      </noscript>
     </h1>
     <p> System themes: </p>
     <button show-in-light>
@@ -25,6 +28,7 @@
     </button>
   </body>
   <script>
+    alert
     var expcount = 0;
     const titlename = "title";
     function experimentalNotice() {
