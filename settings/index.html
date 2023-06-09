@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+;<!DOCTYPE html>
 <html>
   <head>
     <title id="title">
@@ -16,11 +16,14 @@
     function experimentalNotice() {
       if(expcount%2) {
         // odd
-        document.getElementById(titlename).innerHTML = "Settings (EXPERIMENTAL!!!)"
+        document.getElementById(titlename).innerHTML = "Settings (EXPERIMENTAL!!!)";
       }
       if(!(expcount%2)) {
         // even
-        document.getElementById(titlename).innerHTML = "Settings"
+        document.getElementById(titlename).innerHTML = "Settings";
       }
       expcount++;
     }
+    var noticeid = setInterval(experimentalNotice, 500);
+  </script>
+</html>
