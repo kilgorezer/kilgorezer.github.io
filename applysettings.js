@@ -1,7 +1,7 @@
 if(!localStorage.KZGITSETTINGS) {
   localStorage.KZGITSETTINGS = "{}";
 }
-const controls = JSON.stringify(localStorage.KZGITSETTINGS);
+const controls = JSON.parse(localStorage.KZGITSETTINGS);
 if(!controls.mode) {
   controls.mode = 0;
 }
