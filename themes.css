@@ -11,9 +11,14 @@
 	background: #555;
 	color: #fff;
 }
+[DarkMode] a {
+	color: #0000ff;
+	background: black;
+}
 
 [LightMode] {
 	background: #fff;
+	color: #000;
 }
 [LightMode] input,[LightMode] button {
 	background: #eee;
