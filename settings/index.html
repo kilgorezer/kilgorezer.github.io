@@ -5,6 +5,7 @@
       Settings (LOADING)
     </title>
     <link rel="icon" type="image/png" href="settings.png"/>
+    <link rel="stylesheet" href="/themes.css">
   </head>
   <body>
     <h1>
@@ -14,12 +15,16 @@
       </noscript>
     </h1>
     <p> System themes: </p>
-    <button lightmode>
-      Light Mode
-    </button>
-    <button darkmode>
-      Dark Mode
-    </button><br/>
+    <span lightmode>
+      <button onclick="options.mode = 0">
+        Light Mode
+      </button>
+    </span>
+    <span darkmode>
+      <button onclick="options.mode = 1">
+        Dark Mode
+      </button>
+    </span><br/>
     <p> Main URL Redirection </p>
     <button>
       Old Website (Nonfunctional)
@@ -33,7 +38,7 @@
     var expcount = 0;
     const titlename = "title";
     if(!localStorage.KZGITSETTINGS) {
-      localStorage.KZGITSETTINGS = "{}";
+      localStorage.KZGITSETTINGS = "{\"Mode\": 0, \"selfredirect\": true}";
     }
     const options = JSON.parse(localStorage.KZGITSETTINGS);
     function experimentalNotice() {
@@ -52,4 +57,5 @@
       localStorage.KZGITSETTINGS = JSON.stringify(options);
     }, 0);
   </script>
+  <script src="settingsapply.js"></script>
 </html>
