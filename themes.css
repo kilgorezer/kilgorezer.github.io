@@ -1,0 +1,20 @@
+[DarkMode] {
+	background: #555;
+	color: white;
+	border: white;
+}
+[DarkMode] input,[DarkMode] button {
+	background: #444;
+	color: #fff;
+}
+[DarkMode] iframe {
+	background: #555;
+	color: #fff;
+}
+
+[LightMode] {
+	background: #fff;
+}
+[LightMode] input,[LightMode] button {
+	background: #eee;
+}
