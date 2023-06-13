@@ -1,5 +1,5 @@
 if(!localStorage.KZGITSETTINGS) {
-  localStorage.KZGITSETTINGS = "{mode: 0, selfredirect: true}";
+  localStorage.KZGITSETTINGS = "{\"mode\": 0, \"selfredirect\": true}";
 }
 const controls = JSON.parse(localStorage.KZGITSETTINGS);
 if(!controls.mode) {
