@@ -21,4 +21,8 @@
 }
 [LightMode] input,[LightMode] button {
 	background: #eee;
+	color: #000;
+}
+[LightMode] a {
+	color: #0000ff;
 }
