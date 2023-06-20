@@ -26,3 +26,20 @@
 [LightMode] a {
 	color: #0000ff;
 }
+
+[LightMode] [DarkMode] {
+	background: #555;
+	color: white;
+	border: white;
+}
+[LightMode] [DarkMode] input,[DarkMode] button {
+	background: #444;
+	color: #fff;
+}
+[LightMode] [DarkMode] iframe {
+	background: #555;
+	color: #fff;
+}
+[LightMode] [DarkMode] a {
+	color: #0000ff;
+}
