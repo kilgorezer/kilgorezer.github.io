@@ -1,4 +1,5 @@
 alert("Welcome!");
+var redirect = controls.selfredirect?"https://kilgorezer.github.io/":"https://zerius-learning.w3spaces.com/"
 var a = document.getElementById("a");
 var j = "";
 if(location.hash != "" && location.hash[1] == "/") {
@@ -6,4 +7,4 @@ if(location.hash != "" && location.hash[1] == "/") {
     j += location.hash[i];
   }
 }
-a.href = "https://zerius-learning.w3spaces.com/" + j;
+a.href = redirect + j;
