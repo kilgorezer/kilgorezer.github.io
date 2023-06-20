@@ -32,7 +32,7 @@
 	color: white;
 	border: white;
 }
-[LightMode] [DarkMode] input,[DarkMode] button {
+[LightMode] [DarkMode] input,[LightMode] [DarkMode] button {
 	background: #444;
 	color: #fff;
 }
