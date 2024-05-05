@@ -481,7 +481,15 @@ class MyUtilities {
 
           blockType: Scratch.BlockType.REPORTER,
 
-          text: 'creator',
+          text: 'original creator',
+          arguments: {}
+        },
+        {
+          opcode: 'developer',
+
+          blockType: Scratch.BlockType.REPORTER,
+
+          text: 'current developer',
           arguments: {}
         },
         {
@@ -985,47 +993,48 @@ class MyUtilities {
   strtoboolean({A}) {
     return A
   }
+  developer() {return "kilgorezer"}
 }
 Scratch.extensions.register(new MyUtilities());
 
-//class Delay {
-//
-//  constructor() {}
-//
-//  getInfo() {
-//    return {
-//      id: 'delay',
-//      name: 'Delay',
-//
-//      color1: '#ff0000',
-//      color2: '#ff0000',
-//      color3: '#ee0000',
-//
-//      blocks: [
-//        {
-//          opcode: 'main',
-//
-//          blockType: Scratch.BlockType.BOOLEAN,
-//
-//          text: 'wait for [A] seconds',
-//          arguments: {
-//            A: {
-//              type: Scratch.ArgumentType.NUMBER,
-//              defaultValue: 1
-//            }
-//          }
-//        }
-//      ]
-//    }
-//  }
-//
-//  main({A}) {
-//    var time = Date.now() / 1000
-//    while (time - Date.now() / 1000 < Number(A) * -1) {
-//      yield; 
-//    }
-//    return '';
-//  }
-//}
+class SDelay {
 
-Scratch.extensions.register(new Delay());
+  constructor() {}
+
+  getInfo() {
+    return {
+      id: 'delay_2024',
+      name: 'Delay',
+
+      color1: '#ff0000',
+      color2: '#ff0000',
+      color3: '#ee0000',
+
+      blocks: [
+        {
+          opcode: 'd',
+
+          blockType: Scratch.BlockType.BOOLEAN,
+
+          text: 'wait for [A] seconds',
+          arguments: {
+            A: {
+              type: Scratch.ArgumentType.NUMBER,
+              defaultValue: 1
+            }
+          }
+        }
+      ]
+    }
+  }
+
+  d({A}) {
+      var time = Date.now() / 1000
+      while (time - Date.now() / 1000 < Number(A) * -1) {
+      yield; 
+    }
+    return '';
+  }
+}
+
+Scratch.extensions.register(new SDelay());
