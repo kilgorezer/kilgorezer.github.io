@@ -1030,10 +1030,10 @@ class SDelay {
 
   d({A}) {
       var time = Date.now() / 1000
-      while (time - Date.now() / 1000 < Number(A) * -1) {
-      yield; 
-    }
-    return '';
+      //while (time - Date.now() / 1000 < Number(A) * -1) {
+      //yield; 
+    //}
+    return 'Not Implimented';
   }
 }
 
