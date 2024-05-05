@@ -1,4 +1,4 @@
-// By @apanentscratch2022 on Scratch
+// By @apanentscratch2022 and @kilgorezer on Scratch
 var counter = 0
 var string = ''
 var list = []
@@ -11,8 +11,8 @@ class MyUtilities {
 
   getInfo() {
     return {
-      id: 'myutilities',
-      name: 'apanentscratch2022',
+      id: 'myutilities2024',
+      name: 'apanentscratch2022_2024',
 
       color1: '#ff0000',
       color2: '#ff0000',
@@ -988,44 +988,44 @@ class MyUtilities {
 }
 Scratch.extensions.register(new MyUtilities());
 
-class Delay {
-
-  constructor() {}
-
-  getInfo() {
-    return {
-      id: 'delay',
-      name: 'Delay',
-
-      color1: '#ff0000',
-      color2: '#ff0000',
-      color3: '#ee0000',
-
-      blocks: [
-        {
-          opcode: 'main',
-
-          blockType: Scratch.BlockType.BOOLEAN,
-
-          text: 'wait for [A] seconds',
-          arguments: {
-            A: {
-              type: Scratch.ArgumentType.NUMBER,
-              defaultValue: 1
-            }
-          }
-        }
-      ]
-    }
-  }
-
-  main({A}) {
-    var time = Date.now() / 1000
-    while (time - Date.now() / 1000 < Number(A) * -1) {
-      yield; 
-    }
-    return '';
-  }
-}
+//class Delay {
+//
+//  constructor() {}
+//
+//  getInfo() {
+//    return {
+//      id: 'delay',
+//      name: 'Delay',
+//
+//      color1: '#ff0000',
+//      color2: '#ff0000',
+//      color3: '#ee0000',
+//
+//      blocks: [
+//        {
+//          opcode: 'main',
+//
+//          blockType: Scratch.BlockType.BOOLEAN,
+//
+//          text: 'wait for [A] seconds',
+//          arguments: {
+//            A: {
+//              type: Scratch.ArgumentType.NUMBER,
+//              defaultValue: 1
+//            }
+//          }
+//        }
+//      ]
+//    }
+//  }
+//
+//  main({A}) {
+//    var time = Date.now() / 1000
+//    while (time - Date.now() / 1000 < Number(A) * -1) {
+//      yield; 
+//    }
+//    return '';
+//  }
+//}
 
 Scratch.extensions.register(new Delay());
