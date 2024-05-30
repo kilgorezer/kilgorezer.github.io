@@ -43,3 +43,9 @@
 [LightMode] [DarkMode] a {
 	color: #0000ff;
 }
+experimental-stuff {
+	display: none;
+}
+[enable-experimental] experimental-stuff {
+	display: inline;
+}
