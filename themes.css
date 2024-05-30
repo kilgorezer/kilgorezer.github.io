@@ -1,46 +1,46 @@
-[DarkMode] {
+[Dark-Mode] {
 	background: #555;
 	color: white;
 	border: white;
 }
-[DarkMode] input,[DarkMode] button {
+[Dark-Mode] input,[DarkMode] button {
 	background: #444;
 	color: #fff;
 }
-[DarkMode] iframe {
+[Dark-Mode] iframe {
 	background: #555;
 	color: #fff;
 }
-[DarkMode] a {
+[Dark-Mode] a {
 	color: #0000ff;
 }
 
-[LightMode] {
+[Light-Mode] {
 	background: #fff;
 	color: #000;
 }
-[LightMode] input,[LightMode] button {
+[Light-Mode] input,[Light-Mode] button {
 	background: #eee;
 	color: #000;
 }
-[LightMode] a {
+[Light-Mode] a {
 	color: #0000ff;
 }
 
-[LightMode] [DarkMode] {
+[Light-Mode] [Dark-Mode] {
 	background: #555;
 	color: white;
 	border: white;
 }
-[LightMode] [DarkMode] input,[LightMode] [DarkMode] button {
+[Light-Mode] [Dark-Mode] input,[LightMode] [DarkMode] button {
 	background: #444;
 	color: #fff;
 }
-[LightMode] [DarkMode] iframe {
+[Light-Mode] [Dark-Mode] iframe {
 	background: #555;
 	color: #fff;
 }
-[LightMode] [DarkMode] a {
+[Light-Mode] [DarkMode] a {
 	color: #0000ff;
 }
 experimental-stuff {
